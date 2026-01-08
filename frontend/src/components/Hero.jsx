@@ -1,5 +1,5 @@
 import React from 'react';
-
+//développer des API
 const Hero = ({ onShopClick }) => {
   return (
     <div style={{
@@ -8,22 +8,23 @@ const Hero = ({ onShopClick }) => {
       display: 'flex',
       alignItems: 'center',
       padding: '0 8%',
-      overflow: 'hidden',
-      position: 'relative'
+      
     }}>
       {/* Background Decorative Circles */}
-      <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '500px', height: '500px', borderRadius: '50%', background: 'rgba(255, 71, 87, 0.05)', zIndex: 0 }} />
+    
 
-      {/* Text Section */}
-      <div style={{ flex: 1, zIndex: 1, textAlign: 'left' }}>
+      {/*  cet élément doit prendre 1 part de l'espace disponible  */} 
+
+      
+      <div style={{ flex: 1,  textAlign: 'left' }}>
         <span style={{ 
-          background: '#ff4757', color: 'white', padding: '8px 20px', 
-          borderRadius: '50px', fontSize: '0.8rem', fontWeight: 'bold', letterSpacing: '2px',
+          background: '#ff4757', color: 'white', padding: '8px 20px',  
+          borderRadius: '50px', fontSize: '0.8rem', fontWeight: 'bold', letterSpacing: '2px', /*→ Espacement entre lettres */
           boxShadow: '0 4px 15px rgba(255, 71, 87, 0.3)'
         }}>
           NEW ARRIVALS 2026
-        </span>
-        <h1 style={{ fontSize: '5rem', fontWeight: '900', color: '#1a1a1a', margin: '20px 0', lineHeight: '1' }}>
+        </span>              { /* l’espace vertical entre les lignes de texte */}
+        <h1 style={{ fontSize: '5rem', fontWeight: '900', color: '#1a1a1a', margin: '20px 0', lineHeight: '1' }}> 
           Read Your <br /> 
           <span style={{ color: '#ff4757' }}>Dream.</span>
         </h1>
@@ -37,20 +38,20 @@ const Hero = ({ onShopClick }) => {
         </div>
       </div>
 
-      {/* Floating Image Section */}
-      <div style={{ flex: 1, position: 'relative', display: 'flex', justifyContent: 'center' }}>
+      {/* Floating Image Section  / L’élément reste à sa place normale, */}
+      <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
         <img 
           src="https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" 
           alt="Featured Book"
           className="floating-hero"
-          style={{ 
+          style={{   
             width: '320px', borderRadius: '15px', boxShadow: '30px 30px 60px rgba(0,0,0,0.15)',
-            transform: 'rotate(-10deg)', zIndex: 2 
+            transform: 'rotate(-10deg)', zIndex: 2  
           }} 
         />
         <div style={{
           position: 'absolute', bottom: '10%', right: '15%', background: 'white',
-          padding: '15px 25px', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+          padding: '15px 25px', borderRadius: '20px', boxShadow: '0 10px 30px rgba(20, 196, 181, 0.08)',
           zIndex: 3, textAlign: 'center'
         }}>
           <p style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold', color: '#ff4757' }}>4.9 ★</p>
