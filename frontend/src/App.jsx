@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Brands from './components/Brands';
 import Stats from './components/Stats';
+import Features from './components/Features'; // Importation vérifiée
 import Categories from './components/Categories';
 import BookCard from './components/BookCard';
 import Reviews from './components/Reviews';
@@ -124,6 +125,9 @@ function App() {
         <>
           {view === 'home' && <Hero onShopClick={() => handleNavigate('shop')} />}
           
+          {/* Section Features ajoutée ici */}
+          {view === 'home' && <Features />}
+
           <div style={{ padding: '60px 5%' }}>
             <h2 style={{fontSize: 'clamp(1.8rem, 5vw, 2.5rem)', fontWeight: '900', marginBottom: '30px'}}>
               {view === 'wishlist' ? 'My Wishlist ❤️' : 'Our Collection'}
@@ -152,7 +156,6 @@ function App() {
 
           {view === 'home' && <Stats />}
           <Reviews />
-          {/* La Newsletter s'affichera maintenant ici sur la page d'accueil */}
           {view === 'home' && <Newsletter />}
         </>
       )}
