@@ -41,22 +41,20 @@ function App() {
   }, []);
 
   const fetchBooks = () => {
-  // Use the Netlify URL if live, or localhost if testing
   const apiUrl = import.meta.env.PROD ? '/api/books' : 'http://localhost:5000/api/books';
   
   axios.get(apiUrl)
     .then(res => {
-      // CRITICAL FIX: Ensure the data is actually an array before setting state
       if (Array.isArray(res.data)) {
         setBooks(res.data);
       } else {
         console.error("API did not return an array:", res.data);
-        setBooks(EXAMPLE_BOOKS); // Fallback to your example books
+        setBooks(EXAMPLE_BOOKS); 
       }
     })
     .catch(err => {
       console.error("Fetch error:", err);
-      setBooks(EXAMPLE_BOOKS); // Fallback so the app doesn't crash
+      setBooks(EXAMPLE_BOOKS); 
     });
 };
 
@@ -85,7 +83,7 @@ function App() {
         onHomeClick={() => handleNavigate('home')}
         onShopClick={() => handleNavigate('shop')}
         onWishlistClick={() => handleNavigate('wishlist')}
-        onDashboardClick={() => handleNavigate('dashboard')} // Triggers Admin View
+        onDashboardClick={() => handleNavigate('dashboard')} 
         onUserClick={() => { setView('login'); setAuthMode('login'); }}
         search={search}
         setSearch={setSearch}
@@ -98,7 +96,6 @@ function App() {
         onCheckoutClick={() => { setView('checkout'); setIsCartOpen(false); }}
       />
 
-      {/* --- DYNAMIC VIEW ROUTING --- */}
       {view === 'login' ? (
         <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
           {authMode === 'login' ? (
@@ -132,7 +129,6 @@ function App() {
               {view === 'wishlist' ? 'My Wishlist ❤️' : 'Our Collection'}
             </h2>
             
-            {/* RESPONSIVE GRID */}
             <div style={{ 
               display: 'grid', 
               gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', 
@@ -156,6 +152,8 @@ function App() {
 
           {view === 'home' && <Stats />}
           <Reviews />
+          {/* La Newsletter s'affichera maintenant ici sur la page d'accueil */}
+          {view === 'home' && <Newsletter />}
         </>
       )}
 
@@ -170,7 +168,6 @@ function App() {
   );
 }
 
-// --- SHARED STYLES ---
 const authCardStyle = { background: '#f8f9fa', padding: '40px', borderRadius: '20px', textAlign: 'center', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', width: '100%', maxWidth: '400px' };
 const inputStyle = { display: 'block', margin: '10px auto', padding: '12px', width: '100%', boxSizing: 'border-box', borderRadius: '10px', border: '1px solid #ddd' };
 const btnStyle = { background: '#ff4757', color: 'white', border: 'none', padding: '12px 40px', width: '100%', borderRadius: '10px', cursor: 'pointer', fontWeight: 'bold' };
