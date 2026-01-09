@@ -1,5 +1,8 @@
 import React from 'react';
-
+//fonction pour ajouter le livre au panier
+//fonction pour ajouter ou retirer le livre de la wishlist
+//indique si le livre est déjà dans la wishlist
+//fonction pour ouvrir la vue rapide
 const BookCard = ({ book, onAddToCart, onWishlistToggle, isWishlisted, onOpenQuickView }) => {
   return (
     <div style={cardStyle}>
