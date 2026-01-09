@@ -1,5 +1,5 @@
 import React from 'react';
-
+{/*tableau de 6 chaînes de caractères, chacune représentant le nom d'un éditeur de livres*/}
 const Brands = () => {
   const brands = ["Penguin", "HarperCollins", "Scholastic", "Pearson", "Oxford", "Simon & Schuster"];
   
@@ -12,9 +12,11 @@ const Brands = () => {
     }}>
       <div className="marquee">
         <div className="marquee-content">
+          {/*spread operator. tous les éléments d'un tableau pour les placer dans un nouveau tableau.
+           textTransform: 'uppercase' */}
           {[...brands, ...brands].map((brand, i) => (
             <span key={i} style={{ 
-              fontSize: '1.2rem', fontWeight: '800', color: '#dfe6e9', 
+              fontSize: '1.2rem', fontWeight: '800', color: '#054561ff', 
               margin: '0 50px', textTransform: 'uppercase', letterSpacing: '3px' 
             }}>
               {brand}
@@ -22,9 +24,10 @@ const Brands = () => {
           ))}
         </div>
       </div>
-
+{/*: empêche le texte de passer à la ligne.*/}
       <style>{`
-        .marquee { overflow: hidden; white-space: nowrap; }
+      
+        .marquee { overflow: hidden; white-space: nowrap; } 
         .marquee-content {
           display: inline-block;
           animation: scroll 25s linear infinite;

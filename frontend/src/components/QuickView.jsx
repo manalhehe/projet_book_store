@@ -1,3 +1,5 @@
+//détails d'un livre. Il contient une image, des informations, le prix, et un bouton "Add to Cart".
+//Fonction pour fermer le modal
 const QuickView = ({ book, onClose, onAddToCart }) => {
   return (
     <div style={{
@@ -8,13 +10,14 @@ const QuickView = ({ book, onClose, onAddToCart }) => {
     }} onClick={onClose}> 
       
       <div 
+      //événement React qui se déclenche quand la souris quitte l’élément.
         onClick={(e) => e.stopPropagation()} 
         style={{
           background: '#ffffffff', width: '90%', maxWidth: '800px', borderRadius: '25px',
           display: 'flex', overflow: 'hidden', position: 'relative', 
         }}
       >
-        <button onClick={onClose} style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>✕</button>
+<button onClick={onClose} style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>✕</button>
         
         {/* Left Side: Image */}
         <div style={{ flex: 1, background: '#e7e0e0ff', padding: '40px', display: 'flex', alignItems: 'center' }}>
@@ -41,7 +44,9 @@ const QuickView = ({ book, onClose, onAddToCart }) => {
                 background: '#1a1a1a', color: '#ffffffff', border: 'none', padding: '15px 30px',
                 borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', transition: '0.2s'
               }}
-              onMouseEnter={(e) => e.target.style.background = '#e74c3c'}
+              //l’élément sur lequel la souris est passée (le bouton)
+              //événement React qui se déclenche quand la souris quitte l’élément.
+              onMouseEnter={(e) => e.target.style.background = '#e74c3c'} 
               onMouseLeave={(e) => e.target.style.background = '#1a1a1a'}
             >
               Add to Cart
