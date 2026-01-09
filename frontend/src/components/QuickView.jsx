@@ -1,3 +1,5 @@
+//détails d'un livre. Il contient une image, des informations, le prix, et un bouton "Add to Cart".
+//Fonction pour fermer le modal
 const QuickView = ({ book, onClose, onAddToCart }) => {
   return (
     <div style={{
