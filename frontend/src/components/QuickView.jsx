@@ -2,10 +2,10 @@ const QuickView = ({ book, onClose, onAddToCart }) => {
   return (
     <div style={{
       position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
-      backgroundColor: 'rgba(0,0,0,0.7)', zIndex: 2000,
+      backgroundColor: 'rgba(208, 219, 205, 0.7)', zIndex: 2000,
       display: 'flex', justifyContent: 'center', alignItems: 'center',
-      backdropFilter: 'blur(5px)'
-    }} onClick={onClose}>
+      backdropFilter: 'blur(5px)' 
+    }} onClick={onClose}> 
       
       <div 
         onClick={(e) => e.stopPropagation()} 
