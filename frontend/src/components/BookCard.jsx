@@ -22,7 +22,7 @@ const BookCard = ({ book, onAddToCart, onWishlistToggle, isWishlisted, onOpenQui
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+          boxShadow: '0 4px 10px rgba(231, 182, 22, 0.1)',
           transition: 'transform 0.2s ease'
         }}
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}

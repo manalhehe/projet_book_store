@@ -7,7 +7,6 @@ import Hero from './components/Hero';
 import Brands from './components/Brands';
 import Stats from './components/Stats';
 import Features from './components/Features'; // Importation vérifiée
-import Categories from './components/Categories';
 import BookCard from './components/BookCard';
 import Reviews from './components/Reviews';
 import Newsletter from './components/Newsletter';
