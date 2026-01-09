@@ -1,7 +1,6 @@
 import React from 'react';
-//développer des API
-//Cette fonction vient du composant parent -> l’intérieur du composant données
-// properties passées d'un composant parent à un composant enfant
+
+//Ici, onShopClick est une fonction passée par le parent.
 const Hero = ({ onShopClick }) => {
   return (
     <div style={{
@@ -10,8 +9,8 @@ const Hero = ({ onShopClick }) => {
       display: 'flex',
       alignItems: 'center',
       padding: '0 8%',
-      overflow: 'hidden',
-      position: 'relative'
+      overflow: 'hidden', //Masque tout ce qui dépasse du conteneur.
+      position: 'relative'//mais tu peux le déplacer par rapport à sa position
     }}>
       {/* Background Decorative Circles */}
       <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '500px', height: '500px', borderRadius: '50%', background: 'rgba(255, 71, 87, 0.05)', zIndex: 0 }} />
