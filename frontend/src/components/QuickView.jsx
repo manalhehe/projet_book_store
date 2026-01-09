@@ -11,6 +11,7 @@ const QuickView = ({ book, onClose, onAddToCart }) => {
       {/* si l’utilisateur clique sur le fond sombre, la modal se ferme.
       Au-dessus de tout */}
       <div 
+      //événement React qui se déclenche quand la souris quitte l’élément.
         onClick={(e) => e.stopPropagation()} 
         style={{
           background: '#fff', width: '90%', maxWidth: '800px', borderRadius: '25px',
@@ -44,7 +45,9 @@ const QuickView = ({ book, onClose, onAddToCart }) => {
                 background: '#1a1a1a', color: '#fff', border: 'none', padding: '15px 30px',
                 borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', transition: '0.2s'
               }}
-              onMouseEnter={(e) => e.target.style.background = '#e74c3c'}
+              //l’élément sur lequel la souris est passée (le bouton)
+              //événement React qui se déclenche quand la souris quitte l’élément.
+              onMouseEnter={(e) => e.target.style.background = '#e74c3c'} 
               onMouseLeave={(e) => e.target.style.background = '#1a1a1a'}
             >
               Add to Cart
