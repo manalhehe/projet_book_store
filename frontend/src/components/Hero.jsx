@@ -1,6 +1,7 @@
 import React from 'react';
 //développer des API
-//Cette fonction vient du composant parent
+//Cette fonction vient du composant parent -> l’intérieur du composant données
+// properties passées d'un composant parent à un composant enfant
 const Hero = ({ onShopClick }) => { 
   return (
     <div style={{
@@ -16,7 +17,7 @@ const Hero = ({ onShopClick }) => {
 
       {/*  cet élément doit prendre 1 part de l'espace disponible  */} 
 
-      
+      {/* signifie que ce bloc prend tout l’espace disponible. */}
       <div style={{ flex: 1,  textAlign: 'left' }}>
         <span style={{ 
           background: '#ff4757', color: 'white', padding: '8px 20px',  
@@ -59,8 +60,10 @@ const Hero = ({ onShopClick }) => {
           <p style={{ margin: 0, fontSize: '0.7rem', color: '#a4b0be', fontWeight: '600' }}>Top Rated Choice</p>
         </div>
       </div>
-
+{/* @keyframes  qui permet de définir une animation*/}
+{/* ease-in-out contrôle la vitesse de l'animation à différents moments */}
       <style>{`
+      
         @keyframes float {
           0% { transform: rotate(-10deg) translateY(0px); }
           50% { transform: rotate(-10deg) translateY(-25px); }
