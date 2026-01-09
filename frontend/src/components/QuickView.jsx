@@ -6,9 +6,10 @@ const QuickView = ({ book, onClose, onAddToCart }) => {
       position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
       backgroundColor: 'rgba(0,0,0,0.7)', zIndex: 2000,
       display: 'flex', justifyContent: 'center', alignItems: 'center',
-      backdropFilter: 'blur(5px)'
+      backdropFilter: 'blur(5px)' 
     }} onClick={onClose}>
-      
+      {/* si l’utilisateur clique sur le fond sombre, la modal se ferme.
+      Au-dessus de tout */}
       <div 
         onClick={(e) => e.stopPropagation()} 
         style={{
@@ -16,7 +17,7 @@ const QuickView = ({ book, onClose, onAddToCart }) => {
           display: 'flex', overflow: 'hidden', position: 'relative', animation: 'fadeIn 0.3s ease'
         }}
       >
-        <button onClick={onClose} style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>✕</button>
+<button onClick={onClose} style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>✕</button>
         
         {/* Left Side: Image */}
         <div style={{ flex: 1, background: '#f8f9fa', padding: '40px', display: 'flex', alignItems: 'center' }}>
