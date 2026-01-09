@@ -2,6 +2,7 @@ import React from 'react';
 //développer des API
 //Cette fonction vient du composant parent -> l’intérieur du composant données
 // properties passées d'un composant parent à un composant enfant
+//Lancer une action quand on clique sur un bouton
 const Hero = ({ onShopClick }) => { 
   return (
     <div style={{
