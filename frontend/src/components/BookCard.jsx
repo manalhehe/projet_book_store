@@ -10,7 +10,7 @@ const BookCard = ({ book, onAddToCart, onWishlistToggle, isWishlisted, onOpenQui
       <div 
         onClick={(e) => {
           e.stopPropagation(); // Prevents opening quick view when clicking heart
-          onWishlistToggle();
+          onWishlistToggle(); //appelle la fonction pour ajouter ou retirer le livre de la wishlist.
         }}
         style={{
           position: 'absolute',
