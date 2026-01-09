@@ -1,6 +1,7 @@
 import React from 'react';
 //développer des API
-const Hero = ({ onShopClick }) => {
+//Cette fonction vient du composant parent
+const Hero = ({ onShopClick }) => { 
   return (
     <div style={{
       height: '90vh',
