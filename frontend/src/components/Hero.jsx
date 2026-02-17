@@ -7,7 +7,7 @@ const Hero = ({ onShopClick }) => {
   return (
     <div style={{
       height: '90vh',
-      background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+      background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
       display: 'flex',
       alignItems: 'center',
       padding: '0 8%',
