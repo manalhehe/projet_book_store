@@ -1,5 +1,5 @@
+// nécessaire pour utiliser le JSX
 import React from 'react';
-
 //Ici, onShopClick est une fonction passée par le parent.
 const Hero = ({ onShopClick }) => {
   return (
@@ -7,7 +7,7 @@ const Hero = ({ onShopClick }) => {
       height: '90vh',
       background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'center', // centrage vertical
       padding: '0 8%',
       overflow: 'hidden', //Masque tout ce qui dépasse du conteneur.
       position: 'relative'//mais tu peux le déplacer par rapport à sa position
